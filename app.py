@@ -16,6 +16,23 @@ from matplotlib.ticker import FuncFormatter
 
 from dip import color, convolution as C, face, io_utils, metrics
 
+# ----------------------------------------------------------------------------
+# Hugging Face ZeroGPU 相容層
+# 免費帳號建立的 Gradio Space 只能跑在 ZeroGPU 上，而 ZeroGPU 啟動時要求至少
+# 有一個 @spaces.GPU 函式，否則會報 "No @spaces.GPU function detected"。
+# 本專案是純 CPU 演算法，這個空函式從不被呼叫，因此不會佔用任何 GPU 額度；
+# 本機（沒裝 spaces 套件）時會自動略過，不影響執行。
+# ----------------------------------------------------------------------------
+try:
+    import spaces  # type: ignore
+
+    @spaces.GPU
+    def _zerogpu_placeholder() -> None:
+        """空函式：僅為通過 ZeroGPU 啟動檢查。"""
+        return None
+except ImportError:  # 本機或一般 CPU 環境
+    pass
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 NO_IMAGE = "⚠️ 請先在上方「① 上傳影像」載入一張影像。"
 

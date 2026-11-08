@@ -27,6 +27,9 @@ Repo 設為 **Public**。
 
 ## 4. 部署到 Hugging Face Spaces
 1. 到 https://huggingface.co/new-space ，SDK 選 **Gradio**，Visibility 選 **Public**。
+   硬體：免費帳號的 **CPU Basic 無法選擇**（需 PRO），請選 **ZeroGPU（Free）**。
+   ZeroGPU 要求程式內至少有一個 `@spaces.GPU` 函式，`app.py` 已內建一個不會被呼叫的空函式，
+   因此不佔 GPU 額度；`README.md` 的 `python_version` 也已改為 ZeroGPU 支援的 `3.12.12`。
 2. 方法 A（網頁）：把專案所有檔案拖進 Space 的 Files 頁面。
    方法 B（git）：
    ```bash
