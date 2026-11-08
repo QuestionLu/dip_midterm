@@ -1,0 +1,26 @@
+== Experiment A (edge pattern, replicate border) ==
+原圖 (Identity 3×3)            MSE=     0.00  PSNR=inf dB
+均值模糊 (Box 3×3)               MSE=   468.93  PSNR=21.42 dB
+高斯平滑 (Gaussian 3×3)          MSE=   288.76  PSNR=23.53 dB
+高斯平滑 (Gaussian 5×5)          MSE=   447.79  PSNR=21.62 dB
+銳化 (Sharpen 3×3)             MSE=    57.74  PSNR=30.52 dB
+強銳化 (Sharpen 3×3 強)          MSE=    65.38  PSNR=29.98 dB
+邊緣偵測 (Laplacian 3×3)         MSE= 43236.01  PSNR=1.77 dB
+Sobel X（垂直邊緣）                MSE= 12110.34  PSNR=7.30 dB
+Sobel Y（水平邊緣）                MSE= 12418.94  PSNR=7.19 dB
+浮雕 (Emboss 3×3)              MSE=  4620.19  PSNR=11.48 dB
+
+== Experiment B (PSNR to clean image) ==
+noisy input                  PSNR=23.62 dB
+Gaussian sigma=0.5      5x5       PSNR=27.33 dB
+Gaussian sigma=0.75     7x7       PSNR=31.43 dB
+Gaussian sigma=1.0      7x7       PSNR=33.45 dB
+Gaussian sigma=1.5     11x11      PSNR=35.68 dB
+Gaussian sigma=2.0     13x13      PSNR=36.65 dB
+Gaussian sigma=2.5     15x15      PSNR=36.93 dB
+Gaussian sigma=3.0     15x15      PSNR=36.80 dB
+Box 3x3                 3x3       PSNR=32.33 dB
+Box 5x5                 5x5       PSNR=35.38 dB
+Box 7x7                 7x7       PSNR=36.60 dB
+
+saved to /home/claude/dip_midterm/report_assets

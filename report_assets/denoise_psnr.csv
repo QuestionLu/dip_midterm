@@ -1,0 +1,12 @@
+﻿filter,kernel_size,PSNR_to_clean_dB
+noisy (no filter),-,23.62
+Gaussian sigma=0.5,5x5,27.33
+Gaussian sigma=0.75,7x7,31.43
+Gaussian sigma=1.0,7x7,33.45
+Gaussian sigma=1.5,11x11,35.68
+Gaussian sigma=2.0,13x13,36.65
+Gaussian sigma=2.5,15x15,36.93
+Gaussian sigma=3.0,15x15,36.80
+Box 3x3,3x3,32.33
+Box 5x5,5x5,35.38
+Box 7x7,7x7,36.60

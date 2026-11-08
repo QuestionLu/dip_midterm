@@ -1,0 +1,6 @@
+# 數位影像處理期中實作 — 第三方相依套件（Python 3.10+）
+gradio==6.31.0                  # Web GUI（Gradio 6 需要 Python 3.10 以上）
+numpy>=1.24                     # 影像陣列運算、手刻卷積、直方圖
+opencv-python-headless>=4.8,<5  # 人臉偵測（YuNet / Haar）、影像繪圖；headless 版適合雲端伺服器
+Pillow>=10.0                    # 讀檔（PNG/JPG/BMP）、EXIF 轉正
+matplotlib>=3.7                 # 直方圖繪製
